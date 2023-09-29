@@ -1,0 +1,189 @@
+@media print {
+    body {
+        margin: auto;
+        padding: 0;
+    }
+    .container,
+    .sticker32x16,
+    .sticker50x50 {
+        /* margin: 0 !important; */
+        padding: 0 !important;
+        border: none !important;
+    }
+}
+
+@font-face {
+    font-family: "Cerebri Sans,sans-serif";
+    src: url("/assets/fonts/cerebrisans-light.eot");
+    src: local("Cerebri-sans Light"),
+        url("/assets/fonts/cerebrisans-light.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Cerebri Sans,sans-serif";
+    src: url("/assets/fonts/cerebrisans-regular.eot");
+    src: local("Cerebri-sans Regular"),
+        url("/assets/fonts/cerebrisans-regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Cerebri Sans,sans-serif";
+    src: url("/assets/fonts/cerebrisans-medium.eot");
+    src: local("Cerebri-sans Medium"),
+        url("/assets/fonts/cerebrisans-medium.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Cerebri Sans,sans-serif";
+    src: url("/assets/fonts/cerebrisans-semibold.eot");
+    src: local("Cerebri-sans Semibold"),
+        url("/assets/fonts/cerebrisans-semibold.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Cerebri Sans,sans-serif";
+    src: url("/assets/fonts/cerebrisans-bold.eot");
+    src: local("Cerebri-sans Bold"),
+        url("/assets/fonts/cerebrisans-bold.woff") format("woff");
+    font-weight: 700;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cerebri Sans,sans-serif";
+}
+
+.container {
+    padding: 0;
+    margin: auto;
+    /* border: 1px solid #cbcbcb; */
+    /* display: flex;
+    justify-content: start; */
+}
+
+.page-50x50 {
+    padding: 0;
+    margin: auto;
+    width: 108mm;
+    border: 1px solid #cbcbcb;
+}
+
+.page-32x16 {
+    padding: 0;
+    margin: auto;
+    width: 106mm;
+    border: 1px solid #cbcbcb;
+}
+
+.content {
+    justify-content: center;
+}
+
+.row {
+    padding: 0;
+    margin: 0;
+}
+
+.column {
+    float: left;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sticker32x16 {
+    width: 32mm;
+    height: 16mm;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    border-radius: 1.5mm;
+}
+
+.sticker50x50 {
+    width: 50mm;
+    height: 50mm;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    border-radius: 1.5mm;
+}
+
+.s-left {
+    margin-left: 2mm;
+    margin-right: 1mm;
+}
+
+.s-center {
+    margin-left: 1mm;
+    margin-right: 1mm;
+}
+
+.s-right {
+    margin-left: 1mm;
+    margin-right: 2mm;
+}
+
+.location-qrcode {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 14px !important;
+}
+
+.location-font {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
+.location-text {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+.stock-qrcode {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 4px !important;
+}
+
+.sku-font {
+    font-size: 7pt;
+    font-weight: bold;
+}
+
+.lot-font {
+    font-size: 6pt;
+}
+
+.product-qrcode {
+    padding: 0px;
+    margin: 0px;
+    padding-top: 2px !important;
+}
+
+.product-font {
+    font-size: 7pt;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 30mm;
+}
+
+.table-qrcode {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.table-qrcode tr td {
+    padding: 0px;
+}

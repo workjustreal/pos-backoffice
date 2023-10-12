@@ -8,6 +8,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShopmanageController;
 use App\Http\Controllers\PosPriceController;
+use App\Http\Controllers\RequestController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -127,5 +128,9 @@ Route::group(['middleware' => ['auth', 'sessiontoken', 'permission']], function 
             Route::post('product/pos/edit/updateone/{id}', 'updateone')->name('update_priceone');
         });
     });
+    Route::controller(RequestController::class)->group(function () {
+        Route::get('/order/list', 'getOrderList');
+    });
+
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
 });

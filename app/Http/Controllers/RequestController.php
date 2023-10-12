@@ -9,61 +9,6 @@ use Illuminate\Support\Facades\DB;
 
 class RequestController extends Controller
 {
-    // public function getOrderList(Request $request)
-    // {
-    //     $user = $request->username;
-    //     $start = $request->start_date;
-    //     $end = $request->end_date;
-    //     $total_price = 0;
-    //     $user_order = DB::table('users')->leftJoin('pos_shop', 'users.shop_id', '=', 'pos_shop.id')->where('email', '=', $user)->first(['users.id', 'users.name', 'pos_shop.shop_name']);
-    //     if ($user_order) {
-    //         $order = DB::table('pos_order')->where('user_id', '=', $user_order->id)->where('status', '=', '9');
-    //         if ($start !== null && $end !== null) {
-    //             $start = $start . " 00:00:00";
-    //             $end = $end . " 23:59:59";
-    //             $order = $order->whereBetween('pos_order.updated_at', [$start, $end])->get();
-    //             foreach ($order as $val) {
-    //                 $total_price += (int)$val->total_price;
-    //             }
-
-    //             $data = [
-    //                 "success" => "true",
-    //                 "pos" => $user_order->name,
-    //                 "shop" => $user_order->shop_name,
-    //                 "order_count" => number_format(count($order)),
-    //                 "total_price" => number_format($total_price),
-    //                 "data" => $order,
-    //             ];
-    //         } elseif ($start == null && $end == null) {
-    //             $order = $order->get();
-
-    //             foreach ($order as $val) {
-    //                 $total_price += (int)$val->total_price;
-    //             }
-
-    //             $data = [
-    //                 "success" => "true",
-    //                 "pos" => $user_order->name,
-    //                 "shop" => $user_order->shop_name,
-    //                 "order_count" => number_format(count($order)),
-    //                 "total_price" => number_format($total_price),
-    //                 "data" => $order,
-    //             ];
-    //         } else {
-    //             $data = [
-    //                 "success" => "false",
-    //                 "message" => "กรอกข้อมูลให้ครบ"
-    //             ];
-    //         }
-    //     } else {
-    //         $data = [
-    //             "success" => "false",
-    //             "message" => "no have user"
-    //         ];
-    //     }
-    //     return response()->json($data);
-    // }
-
     public function getOrderList(Request $request)
     {
         $user = $request->username;

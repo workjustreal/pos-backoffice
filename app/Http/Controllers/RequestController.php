@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Models\Shop;
 use Illuminate\Support\Facades\DB;
+use App\Http\Resources\Productshelf as ProductshelfResource;
 
 class RequestController extends Controller
 {
@@ -58,9 +59,8 @@ class RequestController extends Controller
             "shop" => $user_order->shop_name,
             "order_count" => number_format(count($order)),
             "total_price" => number_format($total_price),
-            "data" => $order,
+            "data" => ProductshelfResource::collection($order)
         ];
-
         return response()->json($data);
     }
 }

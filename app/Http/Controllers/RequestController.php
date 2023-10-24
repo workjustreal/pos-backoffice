@@ -50,7 +50,8 @@ class RequestController extends Controller
 
         $total_price = 0;
         foreach ($order as $val) {
-            $total_price += (int)$val->total_price;
+            $price = str_replace(',', '', $val->total_price);
+            $total_price += $price;
         }
 
         $data = [
